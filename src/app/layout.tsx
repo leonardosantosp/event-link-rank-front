@@ -1,6 +1,6 @@
 import './globals.css'
-import { Montserrat, Oxanium } from 'next/font/google'
 import type { Metadata } from 'next'
+import { Montserrat, Oxanium } from 'next/font/google'
 
 export const metadata: Metadata = {
   title: 'devsatge'
@@ -25,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${oxanium.variable} ${montserrat.variable}`}>
-      <body className="bg-gray-900 text-gray-100 antialiased">{children}</body>
+      <body className="bg-gray-900 text-gray-100 antialiased bg-[url(/background.png)] bg-no-repeat md:bg-right-top bg-top">
+        {children}
+      </body>
     </html>
   )
 }
